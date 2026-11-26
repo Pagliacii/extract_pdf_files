@@ -7,8 +7,12 @@ Use Python 3.11.5 or a later Python 3.11 release. The `soupsieve` 4 package need
 Install the packages from the lockfile:
 
 ```sh
-pipenv sync --dev
+pipenv install --deploy --ignore-pipfile --dev
 ```
+
+This command rejects a Python version outside the required range. Use Pipenv 2026.12.1 or later for Python version ranges.
+
+`pipenv sync` can skip Soup Sieve on older Python versions and report success. The install command uses `--deploy` to reject those versions.
 
 Run the script:
 
